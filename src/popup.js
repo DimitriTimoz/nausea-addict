@@ -64,12 +64,12 @@ function isValidHostname(value) {
 
 function update_list(list) {
         
-    const container = document.getElementById("blacklist-container");
+    const container = document.getElementById("blacklist-content");
     container.innerHTML = "";
     for (let i = 0; i < list.length; i++) {
         const host = list[i];
         let host_element = document.createElement("div");
-
+        host_element.classList.add("blacklist-row")
         let host_remove = document.createElement("span");
         host_remove.innerHTML = '+';
         host_remove.classList.add("remove-host-btn");
@@ -81,8 +81,8 @@ function update_list(list) {
         let host_name_element = document.createElement("span");
         host_name_element.innerHTML = host;
 
-        host_element.appendChild(host_name_element);
         host_element.appendChild(host_remove);
+        host_element.appendChild(host_name_element);
         container.appendChild(host_element);
     
     }

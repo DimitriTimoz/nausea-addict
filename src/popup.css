@@ -1,12 +1,104 @@
-#blacklist-container > div{
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    background-image:     
+        linear-gradient(white, black),
+        url('hallucination.jpeg');
+    background-size: cover;
+    background-blend-mode: saturation;
+}
+body{
+    border: 3px solid #8000FF;
+    box-sizing: border-box;
+    backdrop-filter: blur(5px);
+    background: radial-gradient(76.42% 63.78% at 50% 50%, rgba(143, 0, 255, 0.51) 0%, rgba(250, 4, 255, 0.71) 100%);
+    min-width: 20rem;
+}
+h1{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  
+}
+
+span{
+    color: white;
+    font-size: 1.0rem;
+    margin: 0.5rem;
+}
+
+#blacklist-container{
+    background: rgba(189, 0, 255, 0.6);
+    backdrop-filter: blur(10px);
+    border-radius: 5px 5px 0px 0px;
+    margin: 2rem;
+    min-height: 20rem;
+    position: relative;
+}
+
+.blacklist-row {
+    display: flex;
+}
+.blacklist-row::after {
+    background: linear-gradient(to right, transparent 0%, #f00 50%, transparent 100%);  
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+ }
+
+ form{
+    position: absolute;
+    bottom: 0px;
+    background: rgba(177, 0, 181, 0.59);
+    border-radius: 0px 0px 10px 10px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+ }
 
-}
+
+ #add-blacklist-host::placeholder{
+    font-family: 'Roboto';
+    color: white;
+ }
+ 
 
 .remove-host-btn{
     cursor: pointer;
-    color: #ff0000;
     font-weight: bold;
     transform: rotate(45deg);
+}
+
+#add-blacklist-host{
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    height: 1.5em;
+    padding: 0.5rem;
+ }
+
+#add-blacklist-submit{
+    background: rgba(255, 0, 184, 0.65);
+    border-radius: 0px 0px 10px 0px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    flex-grow: 1;
+
 }
