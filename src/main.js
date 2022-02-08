@@ -2,37 +2,30 @@
 let poison_nausea=`
 <style>
 body {
-    -webkit-animation:spin 2s linear infinite;
-    -moz-animation:spin 2s linear infinite;
-    animation:spin 2s linear infinite;
+    animation:spin 3s linear infinite;
     overflow: hidden;
 }
-@-moz-keyframes spin
-{ 
-    100% {
-      -moz-transform: rotate(360deg); 
-    } 
-}
-@-webkit-keyframes spin 
-{ 
-    100% {
-        -webkit-transform: rotate(360deg); 
-        -webkit-filter: hue-rotate(360deg);
-    } 
-}
+
+
+
 @keyframes spin 
 { 
+    0% {         
+        -webkit-transform: rotate(7200deg) scale(0.0001); 
+    }
+    50%{
+        -webkit-transform: rotate(3600deg) scale(2); 
+        transform:rotate(3600deg) scale(1); 
+    }
     100% { 
-        -webkit-transform: rotate(360deg); 
-        -webkit-filter: hue-rotate(360deg);
-        transform:rotate(360deg); 
+        -webkit-transform: rotate(7200deg) scale(0.0001); 
+        transform:rotate(7200deg) scale(0.0000001); 
         filter: hue-rotate(360deg);
         
         
+        
     } 
 }
-
-
 </style>
 `;
 var delayInMilliseconds = 1500; //1.5 seconds
