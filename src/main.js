@@ -5,6 +5,7 @@ body {
     -webkit-animation:spin 2s linear infinite;
     -moz-animation:spin 2s linear infinite;
     animation:spin 2s linear infinite;
+    overflow: hidden;
 }
 @-moz-keyframes spin
 { 
@@ -34,7 +35,7 @@ body {
 
 </style>
 `;
-var delayInMilliseconds = 3000; //3 seconds
+var delayInMilliseconds = 1500; //1.5 seconds
 
 window.addEventListener("load", setTimeout(() => {
     
@@ -44,11 +45,12 @@ window.addEventListener("load", setTimeout(() => {
             return;
         }
         let labels = window.location.host.split('.');
-        let domain = labels[labels.length - 2];
+        let domain = labels[labels.length - 2]; 
         blacklist.forEach(blackhost => {
 
             if(blackhost == domain){
                 document.body.innerHTML += poison_nausea;
+                return;
             }
         });
         

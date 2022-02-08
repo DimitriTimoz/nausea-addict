@@ -1,0 +1,12 @@
+#blacklist-container > div{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.remove-host-btn{
+    cursor: pointer;
+    color: #ff0000;
+    font-weight: bold;
+    transform: rotate(45deg);
+}
