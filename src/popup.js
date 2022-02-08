@@ -14,7 +14,7 @@ function add_host()  {
     let hostname = document.getElementById('add-blacklist-host').value;
     if(isValidHostname(hostname)){
         let labels = hostname.split('.');
-        hostname = labels[labels.length - 2] + "." + labels[labels.length - 1];
+        hostname = labels[labels.length - 2];
         blacklist.push(hostname);
         chrome.storage.local.set({ "blacklist": blacklist }, function(){
             console.log("blacklist updated " + hostname);
