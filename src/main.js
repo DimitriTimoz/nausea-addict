@@ -40,6 +40,9 @@ window.addEventListener("load", setTimeout(() => {
     
     chrome.storage.local.get(["blacklist"], (items) => {
         let blacklist = items.blacklist;
+        if(items.blacklist == null){
+            return;
+        }
         let labels = window.location.host.split('.');
         let domain = labels[labels.length - 2];
         blacklist.forEach(blackhost => {

@@ -2,6 +2,9 @@
 let blacklist = [];
 
 chrome.storage.local.get("blacklist", (items) => {
+    if(items.blacklist == null){
+        return;
+    }
     blacklist = items.blacklist;
 
     
