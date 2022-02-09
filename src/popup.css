@@ -27,7 +27,7 @@
 html{
     background-image:     
         linear-gradient(white, black),
-        url('hallucination.jpeg');
+        url('assets/hallucination.jpeg');
     background-size: cover;
     background-blend-mode: saturation;
 }
@@ -123,7 +123,7 @@ span{
     border: none;
     cursor: pointer;
     flex-grow: 1;
-    background-image: url('plus.svg');
+    background-image: url('assets/plus.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
