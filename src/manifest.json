@@ -1,15 +1,16 @@
 {
-    "name": "Nausea addict",  
+    "name": "Nausea addict",
     "version": "0.1",
     "manifest_version": 2,
     "author": "Dimitri Timoz",
     "content_scripts": [
         {
-          "matches": [
-            "<all_urls>"
-          ],
-          "js": ["main.js"]
-          
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "main.js"
+            ]
         }
     ],
     "browser_action": {
@@ -19,10 +20,10 @@
         "storage",
         "<all_urls>"
     ],
-
+    "icons": {
+        "16": "assets/logo16.png",
+        "48": "assets/logo48.png",
+        "128": "assets/logo128.png"
+    },
     "content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'"
-
-  
-
-  
-  }
+}
