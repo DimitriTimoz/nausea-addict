@@ -34,9 +34,9 @@ chrome.storage.local.get(["blacklist"], (items) => {
     let domain = labels[labels.length - 2]; 
     blacklist.forEach(blackhost => {
         if(blackhost == domain){
-            window.addEventListener("load", () =>{ setTimeout(() => {
+            setTimeout(() => {
                 document.body.innerHTML += poison_nausea;
-            }, delayInMilliseconds)});
+            }, delayInMilliseconds);
             return;
         }
         
