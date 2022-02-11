@@ -6,4 +6,5 @@ This extension will help you to fight your darkest addictionss with fun.
 
 ## Installation
 
-As extension developpers, and soon on the chrome web store.
+As extension developpers or on the store 
+https://chrome.google.com/webstore/detail/nausea-addict/gkkabhdbmidfhhpjggnbhlbiffooejgk?hl=en&authuser=1&pli=1
